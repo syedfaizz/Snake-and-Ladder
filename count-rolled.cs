@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 
-
 namespace SnakeLadderSimulation
 {
     class SnakeLadderSimulator
@@ -13,6 +12,7 @@ namespace SnakeLadderSimulation
         const int snake = 2;
         // variable
         static int playerPosition = 0;
+        static int diceCount = 0;
         /// <summary>
         /// This method is used to choose the option.
         /// </summary>
@@ -25,6 +25,7 @@ namespace SnakeLadderSimulation
             {
                 Random random = new Random();
                 option = random.Next(0, 3);
+                diceCount++;
                 // invoking the getDie method
                 die = getDie();
                 if (option == 1)
@@ -51,6 +52,7 @@ namespace SnakeLadderSimulation
                     Console.WriteLine("Player position is:" + playerPosition);
                 }
             }
+            Console.WriteLine("Total number of dice rolled is:" + diceCount);
         }
         /// <summary>
         /// getDie method is used to get the random die value.
