@@ -6,8 +6,7 @@ namespace Snake_ladder
     {
         static void Main(string[] args)
         {
-            SnakeLadderSimulator simulator = new SnakeLadderSimulator();
-            simulator.start();
+            SnakeLadderSimulator.selectOption();
         }
     }
 }
